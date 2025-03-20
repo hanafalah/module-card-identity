@@ -1,8 +1,9 @@
 <?php
 
-namespace Zahzah\ModuleCardIdentity\Commands;
+namespace Hanafalah\ModuleCardIdentity\Commands;
 
-class InstallMakeCommand extends EnvironmentCommand{
+class InstallMakeCommand extends EnvironmentCommand
+{
     /**
      * The name and signature of the console command.
      *
@@ -23,7 +24,7 @@ class InstallMakeCommand extends EnvironmentCommand{
      */
     public function handle()
     {
-        $provider = 'Zahzah\ModuleCardIdentity\ModuleCardIdentityServiceProvider';
+        $provider = 'Hanafalah\ModuleCardIdentity\ModuleCardIdentityServiceProvider';
 
         $this->callSilent('vendor:publish', [
             '--provider' => $provider,
@@ -35,6 +36,6 @@ class InstallMakeCommand extends EnvironmentCommand{
         $this->callSilent('migrate', ['--path' => $migrations]);
         $this->info('✔️  Module Card Identities tables migrated');
 
-        $this->comment('zahzah/module-card-identity installed successfully.');
+        $this->comment('hanafalah/module-card-identity installed successfully.');
     }
 }

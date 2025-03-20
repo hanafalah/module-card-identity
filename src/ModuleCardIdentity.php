@@ -1,11 +1,12 @@
 <?php
 
-namespace Zahzah\ModuleCardIdentity;
+namespace Hanafalah\ModuleCardIdentity;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
-use Zahzah\LaravelSupport\Supports\PackageManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
-class ModuleCardIdentity extends PackageManagement implements DataManagement{
+class ModuleCardIdentity extends PackageManagement implements DataManagement
+{
     /** @var array */
     protected $__module_card_identity_config = [];
 
@@ -16,7 +17,8 @@ class ModuleCardIdentity extends PackageManagement implements DataManagement{
      * @throws Exception description of exception
      * @return void
      */
-    public function __construct(){
-        $this->setConfig('module-card-identity',$this->__module_card_identity_config);
-    }    
+    public function __construct()
+    {
+        $this->setConfig('module-card-identity', $this->__module_card_identity_config);
+    }
 }

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Zahzah\ModuleCardIdentity\Providers;
+namespace Hanafalah\ModuleCardIdentity\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Zahzah\ModuleCardIdentity\Commands as Commands;
+use Hanafalah\ModuleCardIdentity\Commands as Commands;
 
 class CommandServiceProvider extends ServiceProvider
 {
@@ -13,8 +13,9 @@ class CommandServiceProvider extends ServiceProvider
         Commands\InstallMakeCommand::class
     ];
 
-    public function register(){
-        $this->commands(config('module-card-identity.commands',$this->commands));
+    public function register()
+    {
+        $this->commands(config('module-card-identity.commands', $this->commands));
     }
     /**
      * Get the services provided by the provider.

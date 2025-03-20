@@ -1,11 +1,11 @@
-<?php 
+<?php
 
-use Zahzah\ModuleCardIdentity\{
+use Hanafalah\ModuleCardIdentity\{
     Models as ModuleCardIdentityModels,
     Contracts
 };
 
-return [ 
+return [
     'contracts'  => [
         'card_identity'        => Contracts\CardIdentity::class,
         'module_card_identity' => Contracts\ModuleCardIdentity::class

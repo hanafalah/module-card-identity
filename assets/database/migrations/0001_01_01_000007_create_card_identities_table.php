@@ -3,15 +3,16 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Zahzah\ModuleCardIdentity\Models\Identity\CardIdentity;
+use Hanafalah\ModuleCardIdentity\Models\Identity\CardIdentity;
 
 return new class extends Migration
 {
-   use Zahzah\LaravelSupport\Concerns\NowYouSeeMe;
+    use Hanafalah\LaravelSupport\Concerns\NowYouSeeMe;
 
     private $__table;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->__table = app(config('database.models.CardIdentity', CardIdentity::class));
     }
 
@@ -23,13 +24,13 @@ return new class extends Migration
     public function up(): void
     {
         $table_name = $this->__table->getTable();
-        if (!$this->isTableExists()){
+        if (!$this->isTableExists()) {
             Schema::create($table_name, function (Blueprint $table) {
                 $table->id();
-                $table->string('reference_type',50)->nullable(false);
-                $table->string('reference_id',36)->nullable(false);
-                $table->string('flag',50)->nullable(false);
-                $table->string('value',255);
+                $table->string('reference_type', 50)->nullable(false);
+                $table->string('reference_id', 36)->nullable(false);
+                $table->string('flag', 50)->nullable(false);
+                $table->string('value', 255);
                 $table->timestamps();
                 $table->softDeletes();
             });

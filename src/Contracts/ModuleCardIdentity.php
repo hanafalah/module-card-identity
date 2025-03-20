@@ -1,9 +1,7 @@
 <?php
 
-namespace Zahzah\ModuleCardIdentity\Contracts;
+namespace Hanafalah\ModuleCardIdentity\Contracts;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-interface ModuleCardIdentity extends DataManagement{
-    
-}
+interface ModuleCardIdentity extends DataManagement {}

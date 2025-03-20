@@ -1,19 +1,21 @@
 <?php
 
-namespace Zahzah\ModuleCardIdentity\Schemas;
+namespace Hanafalah\ModuleCardIdentity\Schemas;
 
-use Zahzah\LaravelSupport\Supports\PackageManagement;
-use Zahzah\ModuleCardIdentity\Contracts\CardIdentity as ContractsCardIdentity;
+use Hanafalah\LaravelSupport\Supports\PackageManagement;
+use Hanafalah\ModuleCardIdentity\Contracts\CardIdentity as ContractsCardIdentity;
 
-class CardIdentity extends PackageManagement implements ContractsCardIdentity{
-    public function booting(): self{
+class CardIdentity extends PackageManagement implements ContractsCardIdentity
+{
+    public function booting(): self
+    {
         static::$__class = $this;
-        static::$__model = $this->{$this->__entity."Model"}();
+        static::$__model = $this->{$this->__entity . "Model"}();
         return $this;
-}
+    }
 
-protected array $__guard   = ['reference_id','reference_type']; 
-    protected array $__add     = ['flag','value'];
+    protected array $__guard   = ['reference_id', 'reference_type'];
+    protected array $__add     = ['flag', 'value'];
     protected string $__entity = 'CardIdentity';
 
     /**
@@ -25,8 +27,9 @@ protected array $__guard   = ['reference_id','reference_type'];
      *
      * @return \Illuminate\Database\Eloquent\Model The API access model.
      */
-    public function addOrChange(? array $attributes=[]): self{    
-        if (isset($attributes['parent_model'])){
+    public function addOrChange(?array $attributes = []): self
+    {
+        if (isset($attributes['parent_model'])) {
             $parent_model = $attributes['parent_model'];
             $attributes['reference_id'] = $parent_model->getKey();
             $attributes['reference_type'] = $parent_model->getMorphClass();

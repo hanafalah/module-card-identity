@@ -1,12 +1,13 @@
 <?php
 
-namespace Zahzah\ModuleCardIdentity\Models\Identity;
+namespace Hanafalah\ModuleCardIdentity\Models\Identity;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Zahzah\LaravelSupport\Models\BaseModel;
+use Hanafalah\LaravelSupport\Models\BaseModel;
 
-class CardIdentity extends BaseModel{
+class CardIdentity extends BaseModel
+{
     use SoftDeletes;
 
-    protected $list = ['id','reference_type','reference_id','flag','value'];
+    protected $list = ['id', 'reference_type', 'reference_id', 'flag', 'value'];
 }
