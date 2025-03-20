@@ -1,0 +1,26 @@
+{
+    "name": "zahzah/module-card-identity",
+    "autoload": {
+        "psr-4": {
+            "Zahzah\\ModuleCardIdentity\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hamzah",
+            "email": "hamzahnuralfalah@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zahzah\\ModuleCardIdentity\\ModuleCardIdentityServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "zahzah/laravel-support": "1.x"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
