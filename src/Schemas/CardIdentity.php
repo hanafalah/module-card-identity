@@ -3,7 +3,7 @@
 namespace Hanafalah\ModuleCardIdentity\Schemas;
 
 use Hanafalah\LaravelSupport\Supports\PackageManagement;
-use Hanafalah\ModuleCardIdentity\Contracts\CardIdentity as ContractsCardIdentity;
+use Hanafalah\ModuleCardIdentity\Contracts\Schemas\CardIdentity as ContractsCardIdentity;
 
 class CardIdentity extends PackageManagement implements ContractsCardIdentity
 {
