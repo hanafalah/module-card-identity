@@ -18,8 +18,7 @@ class ModuleCardIdentityServiceProvider extends BaseServiceProvider
                 'Provider',
                 'Services' => function () {
                     $this->binds([
-                        Contracts\ModuleCardIdentity::class => new ModuleCardIdentity,
-                        Contracts\CardIdentity::class       => new Schemas\CardIdentity
+                        Contracts\ModuleCardIdentity::class => ModuleCardIdentity::class,
                     ]);
                 }
             ]);

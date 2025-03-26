@@ -7,13 +7,6 @@ use Hanafalah\ModuleCardIdentity\Contracts\CardIdentity as ContractsCardIdentity
 
 class CardIdentity extends PackageManagement implements ContractsCardIdentity
 {
-    public function booting(): self
-    {
-        static::$__class = $this;
-        static::$__model = $this->{$this->__entity . "Model"}();
-        return $this;
-    }
-
     protected array $__guard   = ['reference_id', 'reference_type'];
     protected array $__add     = ['flag', 'value'];
     protected string $__entity = 'CardIdentity';
