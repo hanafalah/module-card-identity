@@ -2,7 +2,7 @@
 
 namespace Hanafalah\ModuleCardIdentity;
 
-use Hanafalah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\Supports\DataManagement;
 use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
 class ModuleCardIdentity extends PackageManagement implements DataManagement
