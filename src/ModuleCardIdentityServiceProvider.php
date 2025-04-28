@@ -11,17 +11,7 @@ class ModuleCardIdentityServiceProvider extends BaseServiceProvider
     {
         $this->registerMainClass(ModuleCardIdentity::class)
             ->registerCommandService(Providers\CommandServiceProvider::class)
-            ->registers([
-                'Namespace',
-                'Model',
-                'Database',
-                'Provider',
-                'Services' => function () {
-                    $this->binds([
-                        Contracts\ModuleCardIdentity::class => ModuleCardIdentity::class,
-                    ]);
-                }
-            ]);
+            ->registers(['*']);
     }
 
     /**
