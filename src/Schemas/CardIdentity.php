@@ -2,7 +2,6 @@
 
 namespace Hanafalah\ModuleCardIdentity\Schemas;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Hanafalah\ModuleCardIdentity\{
     Supports\BaseModuleCardIdentity
