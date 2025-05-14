@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Hanafalah\ModuleCardIdentity\Models\Identity\CardIdentity;
+use Hanafalah\ModuleCardIdentity\Models\CardIdentity;
 
 return new class extends Migration
 {
