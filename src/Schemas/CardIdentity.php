@@ -26,16 +26,16 @@ class CardIdentity extends BaseModuleCardIdentity implements ContractsCardIdenti
         $add = [
             'reference_type' => $card_identity_dto->reference_type,
             'reference_id'   => $card_identity_dto->reference_id,
-            'flag'           => $card_identity_dto->flag
+            'flag'           => $card_identity_dto->flag,
+            'value'          => $card_identity_dto->value
         ];
         if (isset($card_identity_dto->id)) {
-            $guard        = ['id' => $card_identity_dto->id];
-            $add['value'] = $card_identity_dto->value;
+            $guard   = ['id' => $card_identity_dto->id];
+            $create  = [$guard,$add]; 
         }else{
-            $guard = $add;
-            $add = ['value' => $card_identity_dto->value];
+            $create = [$add];
         }
-        $card_identity = $this->usingEntity()->updateOrCreate($guard,$add);
+        $card_identity = $this->usingEntity()->updateOrCreate(...$create);
         return static::$card_identity_model = $card_identity;
     }
 }

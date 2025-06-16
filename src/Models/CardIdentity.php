@@ -8,10 +8,11 @@ use Hanafalah\ModuleCardIdentity\Resources\CardIdentity\{
     ViewCardIdentity,
     ShowCardIdentity
 };
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 
 class CardIdentity extends BaseModel
 {
-    use SoftDeletes;
+    use HasUlids, SoftDeletes;
     
     protected $list = ['id', 'reference_type', 'reference_id', 'flag', 'value'];
 
