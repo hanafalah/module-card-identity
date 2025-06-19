@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @see \Hanafalah\ModuleCardIdentity\Schemas\CardIdentity
+ * @method self setParamLogic(string $logic, bool $search_value = false, ?array $optionals = [])
  * @method self conditionals(mixed $conditionals)
  * @method array updateCardIdentity(?CardIdentityData $card_identity_dto = null)
  * @method Model prepareUpdateCardIdentity(CardIdentityData $card_identity_dto)
