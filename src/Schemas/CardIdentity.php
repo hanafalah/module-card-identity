@@ -12,7 +12,7 @@ use Hanafalah\ModuleCardIdentity\Contracts\Data\CardIdentityData;
 class CardIdentity extends BaseModuleCardIdentity implements ContractsCardIdentity
 {
     protected string $__entity = 'CardIdentity';
-    public static $card_identity_model;
+    public $card_identity_model;
 
     protected array $__cache = [
         'index' => [
@@ -36,6 +36,6 @@ class CardIdentity extends BaseModuleCardIdentity implements ContractsCardIdenti
             $create = [$add];
         }
         $card_identity = $this->usingEntity()->updateOrCreate(...$create);
-        return static::$card_identity_model = $card_identity;
+        return $this->card_identity_model = $card_identity;
     }
 }
